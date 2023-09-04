@@ -7,30 +7,49 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Syne:wght@700;800&family=Work+Sans&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Syne:wght@700;800&family=Work+Sans:wght@400;500;600&display=swap"
       rel="stylesheet"
     />
+    <script
+      src="https://kit.fontawesome.com/29dae32bee.js"
+      crossorigin="anonymous"
+    ></script>
     <meta name="description" content="" />
     <link rel="stylesheet" href="./assets/style.css" />
   </head>
-  <body>
+  <body id="body">
+    <aside id="edit" class="noedit">
+      <p><i class="fa-solid fa-pen-to-square"></i>Mode édition</p>
+      <button>publier les changements</button>
+    </aside>
     <header>
-      <h1>Sophie Bluel <span>Architecte d'intérieur</span></h1>
-      <nav>
-        <ul>
-          <li>projets</li>
-          <li>contact</li>
-          <li>login</li>
-          <li><img src="./assets/icons/instagram.png" alt="Instagram" /></li>
-        </ul>
-      </nav>
+      <div id="navbar">
+        <h1>Sophie Bluel <span>Architecte d'intérieur</span></h1>
+        <nav>
+          <ul>
+            <li id="projetsNav"><a href="#portfolio">projets</a></li>
+            <li id="contactNav"><a href="#contact">contact</a></li>
+            <li id="loginNav"><a href="login.html">login</a></li>
+            <li id="logoutNav" class="noedit">
+              <a href="index.html">logout</a>
+            </li>
+            <li><img src="./assets/icons/instagram.png" alt="Instagram" /></li>
+          </ul>
+        </nav>
+      </div>
     </header>
     <main>
       <section id="introduction">
         <figure>
-          <img src="./assets/images/sophie-bluel.png" alt="" />
+          <img src="./assets/images/sophie-bluel.png" alt="Sophie Bluel" />
+          <a href="" id="editImg" class="noedit allmodal"
+            ><i class="fa-solid fa-pen-to-square"></i> modifier</a
+          >
         </figure>
         <article>
+          <a href="" id="editArticle" class="noedit allmodal"
+            ><i class="fa-solid fa-pen-to-square"></i> modifier</a
+          >
           <h2>Designer d'espace</h2>
           <p>
             Je raconte votre histoire, je valorise vos idées. Je vous accompagne
@@ -51,14 +70,79 @@
       </section>
 
       <section id="portfolio">
-        <h2>Mes Projets</h2>
+        <div class="container">
+          <h2>Mes Projets</h2>
+          <a href="#modal" id="editWorks" class="noedit allmodal"
+            ><i class="fa-solid fa-pen-to-square"></i> modifier</a
+          >
+          <aside
+            id="modal"
+            class="modal noedit"
+            aria-hidden="true"
+            aria-labelledby="titlemodal"
+          >
+            <div class="modal-wrapper">
+              <button id="back" type="button" class="noedit">
+                <img src="./assets/icons/Arrow_Back.svg" alt="" />
+              </button>
+              <button id="close" type="button">X</button>
+              <div class="gallery-wrapper">
+                <h3 id="titlemodal">Galerie Photo</h3>
+                <div id="galleryEdit" class="noedit"></div>
+                <div id="addElements" class="noedit">
+                  <form id="form">
+                    <div id="searchPicture">
+                      <div id="inputPhoto" class="flex">
+                        <i class="fa-sharp fa-regular fa-5x fa-image"></i>
+                        <label for="photo" id="labelPhoto">
+                          <span>Ajouter photo</span>
+                          <input
+                            type="file"
+                            id="photo"
+                            accept="image/jpg, image/png"
+                            size="4000000"
+                          />
+                        </label>
+                        <p>jpg, png : 4mo max</p>
+                      </div>
+
+                      <img src="#" alt="" id="photoFile" class="noedit" />
+                    </div>
+                    <label for="title" id="titleLabel">Titre</label>
+                    <input type="text" id="title" class="borderInput" />
+                    <label for="category" id="categoryLabel">Catégorie</label>
+                    <div id="select-container">
+                      <select name="category" id="category" class="borderInput">
+                        <option value="1">Objets</option>
+                        <option value="2">Appartements</option>
+                        <option value="3">Hotels & restaurants</option>
+                      </select>
+                      <img
+                        id="dropdown"
+                        src="./assets/icons/dropdown.png"
+                        alt=""
+                      />
+                    </div>
+                    <div id="dividerform"></div>
+                    <button id="validate">Valider</button>
+                  </form>
+                </div>
+                <div id="divider"></div>
+                <div class="container">
+                  <button id="addWork">Ajouter une photo</button>
+                  <button id="deleteGallery">Supprimer la galerie</button>
+                </div>
+              </div>
+            </div>
+          </aside>
+        </div>
         <div id="filters">
           <button id="all" class="filter">Tous</button>
           <button id="objects" class="filter">Objets</button>
           <button id="apartments" class="filter">Appartements</button>
           <button id="hotels" class="filter">Hotels & restaurants</button>
         </div>
-        <div class="gallery"></div>
+        <div id="gallery"></div>
       </section>
 
       <section id="contact">
