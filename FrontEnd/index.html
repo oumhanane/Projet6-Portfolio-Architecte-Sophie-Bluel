@@ -1,21 +1,20 @@
 <!DOCTYPE html>
 <html lang="fr">
   <head>
-    <meta charset="UTF-8" />
+    <meta charset="UTF-8">
     <title>Sophie Bluel - Architecte d'intérieur</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
       href="https://fonts.googleapis.com/css2?family=Syne:wght@700;800&family=Work+Sans:wght@400;500;600&display=swap"
-      rel="stylesheet"
-    />
+      rel="stylesheet">
     <script
       src="https://kit.fontawesome.com/29dae32bee.js"
       crossorigin="anonymous"
     ></script>
-    <meta name="description" content="" />
-    <link rel="stylesheet" href="./assets/style.css" />
+    <meta name="description" content="">
+    <link rel="stylesheet" href="./assets/style.css">
   </head>
   <body id="body">
     <aside id="edit" class="noedit">
@@ -33,40 +32,42 @@
             <li id="logoutNav" class="noedit">
               <a href="index.html">logout</a>
             </li>
-            <li><img src="./assets/icons/instagram.png" alt="Instagram" /></li>
+            <li><img src="./assets/icons/instagram.png" alt="Instagram"></li>
           </ul>
         </nav>
       </div>
     </header>
     <main>
-      <section id="introduction">
-        <figure>
-          <img src="./assets/images/sophie-bluel.png" alt="Sophie Bluel" />
-          <a href="" id="editImg" class="noedit allmodal"
-            ><i class="fa-solid fa-pen-to-square"></i> modifier</a
-          >
-        </figure>
-        <article>
-          <a href="" id="editArticle" class="noedit allmodal"
-            ><i class="fa-solid fa-pen-to-square"></i> modifier</a
-          >
-          <h2>Designer d'espace</h2>
-          <p>
-            Je raconte votre histoire, je valorise vos idées. Je vous accompagne
-            de la conception à la livraison finale du chantier.
-          </p>
-          <p>
-            Chaque projet sera étudié en commun, de façon à mettre en valeur les
-            volumes, les matières et les couleurs dans le respect de l’esprit
-            des lieux et le choix adapté des matériaux. Le suivi du chantier
-            sera assuré dans le souci du détail, le respect du planning et du
-            budget.
-          </p>
-          <p>
-            En cas de besoin, une équipe pluridisciplinaire peut-être constituée
-            : architecte DPLG, décorateur(trice)
-          </p>
-        </article>
+      <section>
+        <div id="introduction">
+          <figure>
+            <img src="./assets/images/sophie-bluel.png" alt="Sophie Bluel">
+            <a href="" id="editImg" class="noedit allmodal"
+              ><i class="fa-solid fa-pen-to-square"></i> modifier</a
+            >
+          </figure>
+          <article>
+            <a href="" id="editArticle" class="noedit allmodal"
+              ><i class="fa-solid fa-pen-to-square"></i> modifier</a
+            >
+            <h2>Designer d'espace</h2>
+            <p>
+              Je raconte votre histoire, je valorise vos idées. Je vous
+              accompagne de la conception à la livraison finale du chantier.
+            </p>
+            <p>
+              Chaque projet sera étudié en commun, de façon à mettre en valeur
+              les volumes, les matières et les couleurs dans le respect de
+              l’esprit des lieux et le choix adapté des matériaux. Le suivi du
+              chantier sera assuré dans le souci du détail, le respect du
+              planning et du budget.
+            </p>
+            <p>
+              En cas de besoin, une équipe pluridisciplinaire peut-être
+              constituée : architecte DPLG, décorateur(trice)
+            </p>
+          </article>
+        </div>
       </section>
 
       <section id="portfolio">
@@ -83,7 +84,7 @@
           >
             <div class="modal-wrapper">
               <button id="back" type="button" class="noedit">
-                <img src="./assets/icons/Arrow_Back.svg" alt="" />
+                <img src="./assets/icons/Arrow_Back.svg" alt="">
               </button>
               <button id="close" type="button">X</button>
               <div class="gallery-wrapper">
@@ -100,19 +101,19 @@
                             type="file"
                             id="photo"
                             accept="image/jpg, image/png"
-                            size="4000000"
-                          />
+                            size="4000000">
                         </label>
                         <p>jpg, png : 4mo max</p>
                       </div>
 
-                      <img src="#" alt="" id="photoFile" class="noedit" />
+                      <img src="#" alt="" id="photoFile" class="noedit">
                     </div>
                     <label for="title" id="titleLabel">Titre</label>
-                    <input type="text" id="title" class="borderInput" />
+                    <input type="text" id="title" class="borderInput">
                     <label for="category" id="categoryLabel">Catégorie</label>
                     <div id="select-container">
                       <select name="category" id="category" class="borderInput">
+                        <option value="0">choix</option>
                         <option value="1">Objets</option>
                         <option value="2">Appartements</option>
                         <option value="3">Hotels & restaurants</option>
@@ -120,8 +121,7 @@
                       <img
                         id="dropdown"
                         src="./assets/icons/dropdown.png"
-                        alt=""
-                      />
+                        alt="">
                     </div>
                     <div id="dividerform"></div>
                     <button id="validate">Valider</button>
@@ -150,12 +150,12 @@
         <p>Vous avez un projet ? Discutons-en !</p>
         <form action="#" method="post">
           <label for="name">Nom</label>
-          <input type="text" name="name" id="name" />
+          <input type="text" name="name" id="name">
           <label for="email">Email</label>
-          <input type="email" name="email" id="email" />
+          <input type="email" name="email" id="email">
           <label for="message">Message</label>
           <textarea name="message" id="message" cols="30" rows="10"></textarea>
-          <input type="submit" value="Envoyer" />
+          <input type="submit" value="Envoyer">
         </form>
       </section>
     </main>
